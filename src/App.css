@@ -1,38 +1,177 @@
-.App {
-  text-align: center;
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 15px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container_
+{
+  display: grid;
+  padding: 2rem;
+  gap: 1rem;
+}
+nav
+{
+  background: none;
+}
+.main_image
+{
+  height: 300px;
+  object-fit: cover;
+  background-image: url(image-web-3-mobile.jpg);
+  background-repeat: no-repeat;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+h1
+{
+  font-weight: 800;
+  font-size: 3rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+p
+{
+  color:  hsl(233, 8%, 79%);
+  font-weight: 600;
+}
+
+.main_para button
+{
+  height: 3rem;
+  width: 8rem;
+  background-color:  hsl(5, 85%, 63%);
+  color: hsl(36, 100%, 99%);
+  font-weight: 600;
+}
+
+.box
+{
+  height: max-content;
+  background-color: hsl(240, 100%, 5%);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.box1, .box2, .box3 p{
+  
+  color: hsl(236, 13%, 42%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.box1, .box2, .box3 h3{
+  color:  hsl(36, 100%, 99%);
+}
+
+h2
+{
+  color: hsl(35, 77%, 62%);
+}
+.box1, .box2, .box3
+{
+  flex: 1;
+  margin-top: 1rem;
+}
+
+.box1, .box2
+{
+  border-bottom: 1px solid grey;
+}
+
+
+.card_
+{
+  display: flex;
+  height: 11rem;
+  gap: 2rem;
+}
+
+.card-img-top 
+{
+  height: 11rem;
+  width: calc(100% - 50%);
+  object-fit: cover;
+}
+.card-img-top, .card-body
+{
+  flex: 1;
+}
+.card-body
+{
+  height: 10rem;
+}
+
+.card-title
+{
+  font-size: 2rem;
+  color: hsl(233, 8%, 79%);
+}
+
+
+.card-text1
+{
+  color: hsl(240, 100%, 5%);
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.card-text2
+{
+  color:  hsl(233, 8%, 79%);
+}
+
+
+@media (min-width: 768px)
+{
+
+  .main_image
+  {
+    background-image: url('image-web-3-desktop.jpg');
   }
-  to {
-    transform: rotate(360deg);
+  .container_
+  {
+   display: grid;
+   gap: 20px;
+   grid-template-areas: 'navbar navbar navbar'
+   'main_image main_image box'
+   'main-heading main_para box'
+   'card1 card2 card3';
+
+   padding: 0 10rem;
+  }
+  nav
+  {
+    grid-area: navbar
+  }
+
+  .main_image
+  {
+    grid-area: main_image;
+  }
+
+  .box
+  {
+    grid-area: box;
+  }
+  
+  .main_heading{
+    grid-area: main-heading;
+  }
+
+  .main_para
+  {
+    grid-area: main_para;
+  }
+  .card1{
+    grid-area: card1;
+  }
+
+  .card2{
+    grid-area: card2;
+  }
+
+  .card3{
+    grid-area: card3;
   }
 }
